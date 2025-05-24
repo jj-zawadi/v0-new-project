@@ -12,27 +12,28 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[80vh] w-full overflow-hidden">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
-          alt="Elegant interior design showcase"
+          src="/images/metallic-epoxy-floor.jpg"
+          alt="Premium metallic epoxy flooring installation showcase"
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-            Transform Your Space
+            Kenya's Premier Epoxy Specialists
           </h1>
           <p className="mb-8 max-w-2xl text-lg text-white/90 sm:text-xl">
-            Elegance Interiors brings your vision to life with bespoke interior design solutions that blend beauty,
-            functionality, and your unique style.
+            Transform your space with stunning epoxy flooring, custom epoxy furniture, decorative wall finishes, and
+            unique epoxy accessories. Premium quality, lasting beauty.
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
-              <Link href="/services">Our Services</Link>
+              <Link href="/services">Our Epoxy Services</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">Book Consultation</Link>
             </Button>
           </div>
         </div>
@@ -41,37 +42,38 @@ export default function Home() {
       {/* Services Preview Section */}
       <section className="container py-20">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Our Services</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Our Epoxy Specializations</h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            We offer comprehensive interior design services tailored to your specific needs and preferences.
+            From seamless epoxy floors to custom furniture and decorative accessories, we create stunning epoxy
+            solutions for every space and need.
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <ServiceCard
-            title="Residential Design"
-            description="Transform your home into a personalized sanctuary that reflects your lifestyle and aesthetic preferences."
+            title="Epoxy Flooring"
+            description="Seamless, durable epoxy floors in metallic, solid colors, and decorative patterns. Perfect for homes, offices, and commercial spaces."
             icon="Home"
-            href="/services/residential"
+            href="/services/epoxy-flooring"
           />
           <ServiceCard
-            title="Commercial Design"
-            description="Create functional and inspiring workspaces that enhance productivity and impress clients."
+            title="Epoxy Furniture"
+            description="Custom epoxy tables, countertops, and furniture pieces. Unique resin art combined with wood and other materials."
             icon="Building2"
-            href="/services/commercial"
+            href="/services/epoxy-furniture"
           />
           <ServiceCard
-            title="Space Planning"
-            description="Optimize your layout for flow, functionality, and aesthetic appeal with our expert space planning."
+            title="Epoxy Walls & Accessories"
+            description="Decorative epoxy wall finishes, custom accessories, and artistic pieces that add character to any space."
             icon="LayoutPanelTop"
-            href="/services/space-planning"
+            href="/services/epoxy-accessories"
           />
         </div>
 
         <div className="mt-12 text-center">
           <Button asChild variant="outline">
             <Link href="/services" className="group">
-              View All Services
+              View All Epoxy Services
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -82,37 +84,38 @@ export default function Home() {
       <section className="bg-muted/50 py-20">
         <div className="container">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Featured Projects</h2>
+            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Featured Epoxy Projects</h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Explore our portfolio of stunning interior transformations and design solutions.
+              Discover our stunning epoxy flooring installations, custom furniture pieces, and decorative accessories
+              crafted across Kenya.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <ProjectCard
-              title="Modern Minimalist Apartment"
-              category="Residential"
-              imageSrc="/placeholder.svg?height=600&width=800"
-              href="/projects/modern-apartment"
+              title="Metallic Epoxy Floor"
+              category="Epoxy Flooring"
+              imageSrc="/images/metallic-epoxy-floor.jpg"
+              href="/gallery?category=flooring"
             />
             <ProjectCard
-              title="Luxury Boutique Hotel"
-              category="Commercial"
-              imageSrc="/placeholder.svg?height=600&width=800"
-              href="/projects/boutique-hotel"
+              title="Custom Epoxy River Table"
+              category="Epoxy Furniture"
+              imageSrc="/images/epoxy-river-table.jpg"
+              href="/gallery?category=furniture"
             />
             <ProjectCard
-              title="Contemporary Office Space"
-              category="Commercial"
-              imageSrc="/placeholder.svg?height=600&width=800"
-              href="/projects/office-space"
+              title="Epoxy Wall Art Installation"
+              category="Epoxy Walls"
+              imageSrc="/images/epoxy-wall-mural.jpg"
+              href="/gallery?category=walls"
             />
           </div>
 
           <div className="mt-12 text-center">
             <Button asChild>
               <Link href="/gallery" className="group">
-                View All Projects
+                View All Epoxy Projects
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -124,10 +127,10 @@ export default function Home() {
       <section className="container py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
           <div className="flex flex-col justify-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Why Choose Elegance Interiors</h2>
+            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Why Choose Our Epoxy Expertise</h2>
             <p className="mb-8 text-muted-foreground">
-              With years of experience and a passion for design, we deliver exceptional results that exceed
-              expectations.
+              As Kenya's leading epoxy specialists, we combine technical expertise with artistic vision to create
+              exceptional epoxy solutions that last.
             </p>
             <ul className="space-y-4">
               <li className="flex items-start">
@@ -135,9 +138,10 @@ export default function Home() {
                   <Check className="h-4 w-4" />
                 </div>
                 <div>
-                  <h3 className="font-medium">Expert Designers</h3>
+                  <h3 className="font-medium">Premium Epoxy Resins</h3>
                   <p className="text-muted-foreground">
-                    Our team consists of certified interior designers with years of experience.
+                    We use only the highest quality epoxy resins and pigments for superior durability and stunning
+                    finishes.
                   </p>
                 </div>
               </li>
@@ -146,9 +150,9 @@ export default function Home() {
                   <Check className="h-4 w-4" />
                 </div>
                 <div>
-                  <h3 className="font-medium">Personalized Approach</h3>
+                  <h3 className="font-medium">Master Craftsmen</h3>
                   <p className="text-muted-foreground">
-                    We tailor our designs to reflect your unique style and requirements.
+                    Our skilled artisans specialize exclusively in epoxy work, ensuring perfect application every time.
                   </p>
                 </div>
               </li>
@@ -157,9 +161,9 @@ export default function Home() {
                   <Check className="h-4 w-4" />
                 </div>
                 <div>
-                  <h3 className="font-medium">Quality Materials</h3>
+                  <h3 className="font-medium">Custom Designs</h3>
                   <p className="text-muted-foreground">
-                    We source the finest materials and furnishings for your space.
+                    Every epoxy project is uniquely designed to match your vision, from colors to patterns and textures.
                   </p>
                 </div>
               </li>
@@ -168,9 +172,9 @@ export default function Home() {
                   <Check className="h-4 w-4" />
                 </div>
                 <div>
-                  <h3 className="font-medium">End-to-End Service</h3>
+                  <h3 className="font-medium">Lifetime Support</h3>
                   <p className="text-muted-foreground">
-                    From concept to completion, we handle every aspect of your project.
+                    We provide ongoing maintenance advice and support to keep your epoxy installations looking perfect.
                   </p>
                 </div>
               </li>
@@ -178,10 +182,11 @@ export default function Home() {
           </div>
           <div className="relative h-[400px] overflow-hidden rounded-lg lg:h-auto">
             <Image
-              src="/placeholder.svg?height=800&width=600"
-              alt="Interior designer at work"
+              src="/images/epoxy-rose-art.jpg"
+              alt="Epoxy specialist crafting custom furniture"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -193,27 +198,27 @@ export default function Home() {
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">What Our Clients Say</h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Don't just take our word for it. Here's what our clients have to say about working with us.
+              Hear from satisfied customers who have transformed their spaces with our epoxy solutions across Kenya.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <TestimonialCard
-              quote="Working with Elegance Interiors was a dream. They transformed our home into a beautiful space that perfectly reflects our style and needs."
-              author="Sarah Johnson"
-              role="Homeowner"
+              quote="The metallic epoxy floor in our living room is absolutely stunning! It's been two years and it still looks brand new. Best investment we made for our home."
+              author="Sarah Wanjiku"
+              role="Homeowner, Nairobi"
               rating={5}
             />
             <TestimonialCard
-              quote="The team's attention to detail and creative solutions helped us maximize our office space while creating an inspiring environment for our employees."
-              author="Michael Chen"
-              role="CEO, TechStart Inc."
+              quote="Our custom epoxy conference table is the centerpiece of our boardroom. Clients always ask about it. The craftsmanship is exceptional."
+              author="Michael Kiprotich"
+              role="Business Owner, Eldoret"
               rating={5}
             />
             <TestimonialCard
-              quote="From the initial consultation to the final reveal, the process was seamless. Their expertise and professionalism exceeded our expectations."
-              author="Emily Rodriguez"
-              role="Restaurant Owner"
+              quote="The epoxy bar counter transformed our restaurant's look completely. It's easy to clean, durable, and gets compliments every day."
+              author="Grace Muthoni"
+              role="Restaurant Owner, Mombasa"
               rating={5}
             />
           </div>
@@ -221,7 +226,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Button asChild variant="outline">
               <Link href="/testimonials" className="group">
-                Read More Testimonials
+                Read More Success Stories
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -232,12 +237,13 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Ready to Transform Your Space?</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Ready for Your Epoxy Transformation?</h2>
           <p className="mx-auto mb-8 max-w-2xl">
-            Contact us today to schedule a consultation and take the first step toward your dream interior.
+            Contact us today for a free consultation and site visit. Let's create something beautiful and lasting
+            together.
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/contact">Get Started</Link>
+            <Link href="/contact">Book Consultation</Link>
           </Button>
         </div>
       </section>
