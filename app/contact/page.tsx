@@ -1,26 +1,23 @@
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
 import { Clock, Mail, MapPin, Phone } from "lucide-react"
 import Image from "next/image"
-import ContactForm from "@/components/contact-form"
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[40vh] w-full overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=800&fit=crop"
-          alt="Contact Epoxy & Aesthetic Works Kenya"
-          fill
-          className="object-cover"
-          priority
-        />
+        <Image src="/placeholder.svg?height=800&width=1920" alt="Contact Us" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/40" />
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">Contact Us</h1>
           <p className="max-w-2xl text-lg text-white/90">
-            Ready to transform your space with premium epoxy solutions? Get in touch for a free consultation and site
-            visit.
+            Get in touch with our team to discuss your interior design needs.
           </p>
         </div>
       </section>
@@ -29,23 +26,64 @@ export default function ContactPage() {
       <section className="container py-16">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="mb-6 text-3xl font-bold tracking-tight">Book Your Consultation</h2>
+            <h2 className="mb-6 text-3xl font-bold tracking-tight">Get in Touch</h2>
             <p className="mb-8 text-muted-foreground">
-              Ready to start your epoxy project? Fill out the form below and our epoxy specialists will get back to you
-              within 24 hours to schedule a site visit and consultation.
+              We'd love to hear from you. Fill out the form below, and one of our design consultants will get back to
+              you within 24 hours.
             </p>
 
-            <ContactForm />
+            <form className="space-y-6">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="first-name">First name</Label>
+                  <Input id="first-name" placeholder="Enter your first name" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="last-name">Last name</Label>
+                  <Input id="last-name" placeholder="Enter your last name" />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="Enter your email" />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="phone">Phone</Label>
+                <Input id="phone" type="tel" placeholder="Enter your phone number" />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="service">Service of Interest</Label>
+                <Select>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a service" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="residential">Residential Design</SelectItem>
+                    <SelectItem value="commercial">Commercial Design</SelectItem>
+                    <SelectItem value="consultation">Design Consultation</SelectItem>
+                    <SelectItem value="renovation">Renovation</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea id="message" placeholder="Tell us about your project and design needs" rows={5} />
+              </div>
+
+              <Button type="submit" className="w-full">
+                Submit
+              </Button>
+            </form>
           </div>
 
           <div className="flex flex-col gap-8">
             <div className="relative h-[300px] overflow-hidden rounded-lg lg:h-[400px]">
-              <Image
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=800&fit=crop"
-                alt="Epoxy workshop in Kenya"
-                fill
-                className="object-cover"
-              />
+              <Image src="/placeholder.svg?height=800&width=1200" alt="Our office" fill className="object-cover" />
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2">
@@ -53,13 +91,13 @@ export default function ContactPage() {
                 <CardHeader className="pb-2">
                   <CardTitle className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    Service Areas
+                    Visit Us
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>Nairobi & Surrounding Areas</p>
-                  <p>Mombasa, Kisumu, Eldoret</p>
-                  <p>Nationwide Service Available</p>
+                  <p>123 Design Street</p>
+                  <p>Suite 101</p>
+                  <p>New York, NY 10001</p>
                 </CardContent>
               </Card>
 
@@ -71,9 +109,9 @@ export default function ContactPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>Monday - Friday: 8am - 6pm</p>
-                  <p>Saturday: 9am - 4pm</p>
-                  <p>Sunday: Emergency Only</p>
+                  <p>Monday - Friday: 9am - 6pm</p>
+                  <p>Saturday: 10am - 4pm</p>
+                  <p>Sunday: Closed</p>
                 </CardContent>
               </Card>
 
@@ -81,13 +119,13 @@ export default function ContactPage() {
                 <CardHeader className="pb-2">
                   <CardTitle className="flex items-center gap-2">
                     <Phone className="h-5 w-5 text-primary" />
-                    Call or WhatsApp
+                    Call Us
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>Phone: +254 757 676 742</p>
-                  <p>WhatsApp: +254 757 676 742</p>
-                  <p>Available 24/7 for consultations</p>
+                  <p>Main: (555) 123-4567</p>
+                  <p>Helpline: (555) 987-6543</p>
+                  <p>Fax: (555) 123-4568</p>
                 </CardContent>
               </Card>
 
@@ -99,9 +137,9 @@ export default function ContactPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>epoxy.aestheticworks@outlook.com</p>
-                  <p>Send photos for quick estimates</p>
-                  <p>Project consultations available</p>
+                  <p>info@eleganceinteriors.com</p>
+                  <p>support@eleganceinteriors.com</p>
+                  <p>careers@eleganceinteriors.com</p>
                 </CardContent>
               </Card>
             </div>
@@ -112,12 +150,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="h-[400px] w-full bg-muted">
         <div className="relative h-full w-full">
-          <Image
-            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1920&h=800&fit=crop"
-            alt="Kenya service areas map"
-            fill
-            className="object-cover"
-          />
+          <Image src="/placeholder.svg?height=800&width=1920" alt="Map location" fill className="object-cover" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="rounded-lg bg-background p-4 shadow-lg">
               <MapPin className="h-8 w-8 text-primary" />
@@ -131,69 +164,70 @@ export default function ContactPage() {
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Common questions about our epoxy flooring, furniture, and accessory services.
+            Find answers to common questions about our services and process.
           </p>
         </div>
 
         <div className="mx-auto max-w-3xl space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>How much does epoxy flooring cost in Kenya?</CardTitle>
+              <CardTitle>How much does interior design cost?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Our epoxy flooring starts from KES 1,500 per square meter for basic solid colors, up to KES 2,800 for
-                premium metallic finishes. Final cost depends on area size, design complexity, and surface preparation
-                requirements.
+                Our design fees vary based on the scope and complexity of your project. We offer different service
+                packages starting from $1,500 for single-room designs. During our initial consultation, we'll discuss
+                your budget and provide a detailed quote.
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>How long does epoxy flooring last?</CardTitle>
+              <CardTitle>How long does a typical design project take?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                With proper installation and maintenance, our epoxy floors last 10-15 years or more. We use premium
-                resins designed for Kenya's climate and provide warranties on all our work.
+                Project timelines depend on the scope of work. A single room design might take 4-6 weeks, while a full
+                home renovation could take 3-6 months. We'll provide a detailed timeline during our initial planning
+                phase.
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Can you create custom epoxy furniture?</CardTitle>
+              <CardTitle>Do you work with clients remotely?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Yes! We specialize in custom epoxy furniture including dining tables, coffee tables, countertops, and
-                bar tops. Each piece is uniquely designed and handcrafted to your specifications.
+                Yes, we offer virtual design services for clients outside our local area. Through video consultations,
+                digital mood boards, and 3D renderings, we can create beautiful designs regardless of your location.
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Do you serve areas outside Nairobi?</CardTitle>
+              <CardTitle>Can you work with my existing furniture?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Yes, we provide services across Kenya including Mombasa, Kisumu, Eldoret, and other major towns. Travel
-                costs may apply for projects outside the Nairobi metropolitan area.
+                We're happy to incorporate your existing pieces into the new design. During our consultation, we'll
+                discuss which items you'd like to keep and how to integrate them with new elements.
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>How long does installation take?</CardTitle>
+              <CardTitle>Do you offer project management services?</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Epoxy flooring typically takes 2-3 days for residential spaces, including surface preparation and curing
-                time. Custom furniture pieces take 1-2 weeks depending on complexity. We'll provide exact timelines
-                during consultation.
+                Yes, our Premium and Luxury design packages include project management services. We coordinate with
+                contractors, oversee installations, and ensure that every aspect of the design is executed to our high
+                standards.
               </p>
             </CardContent>
           </Card>

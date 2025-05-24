@@ -5,14 +5,13 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import WhatsAppFloat from "@/components/whatsapp-float"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Epoxy & Aesthetic Works Kenya | Professional Interior Design & Epoxy Solutions",
+  title: "Elegance Interiors | Professional Interior Design Services",
   description:
-    "Transform your space with our professional epoxy flooring, 3D wall finishes, and aesthetic interior design services in Kenya. Quality craftsmanship for homes and businesses.",
+    "Transform your space with our professional interior design services. We offer custom solutions for residential and commercial spaces.",
     generator: 'v0.dev'
 }
 
@@ -29,7 +28,6 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
-            <WhatsAppFloat />
           </div>
         </ThemeProvider>
       </body>

@@ -12,18 +12,12 @@ export default function ShopPage() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[40vh] w-full overflow-hidden">
-        <Image
-          src="/images/epoxy-serving-tray.jpg"
-          alt="Epoxy accessories shop"
-          fill
-          className="object-cover"
-          priority
-        />
+        <Image src="/placeholder.svg?height=800&width=1920" alt="Our shop" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/40" />
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">Epoxy Shop</h1>
+          <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">Shop</h1>
           <p className="max-w-2xl text-lg text-white/90">
-            Discover our curated collection of epoxy accessories, furniture pieces, and custom art for your home.
+            Discover our curated collection of furniture, decor, and accessories for your home.
           </p>
         </div>
       </section>
@@ -39,7 +33,25 @@ export default function ShopPage() {
                 <div className="flex items-center">
                   <input type="checkbox" id="furniture" className="h-4 w-4 rounded border-gray-300" />
                   <label htmlFor="furniture" className="ml-2 text-sm">
-                    Epoxy Furniture
+                    Furniture
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input type="checkbox" id="lighting" className="h-4 w-4 rounded border-gray-300" />
+                  <label htmlFor="lighting" className="ml-2 text-sm">
+                    Lighting
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input type="checkbox" id="decor" className="h-4 w-4 rounded border-gray-300" />
+                  <label htmlFor="decor" className="ml-2 text-sm">
+                    Decor
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input type="checkbox" id="textiles" className="h-4 w-4 rounded border-gray-300" />
+                  <label htmlFor="textiles" className="ml-2 text-sm">
+                    Textiles
                   </label>
                 </div>
                 <div className="flex items-center">
@@ -48,33 +60,51 @@ export default function ShopPage() {
                     Accessories
                   </label>
                 </div>
-                <div className="flex items-center">
-                  <input type="checkbox" id="art" className="h-4 w-4 rounded border-gray-300" />
-                  <label htmlFor="art" className="ml-2 text-sm">
-                    Wall Art
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input type="checkbox" id="serving" className="h-4 w-4 rounded border-gray-300" />
-                  <label htmlFor="serving" className="ml-2 text-sm">
-                    Serving Items
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input type="checkbox" id="custom" className="h-4 w-4 rounded border-gray-300" />
-                  <label htmlFor="custom" className="ml-2 text-sm">
-                    Custom Orders
-                  </label>
-                </div>
               </div>
             </div>
 
             <div>
-              <h3 className="mb-4 text-lg font-medium">Price Range (KES)</h3>
-              <Slider defaultValue={[0, 50000]} min={0} max={100000} step={1000} />
+              <h3 className="mb-4 text-lg font-medium">Price Range</h3>
+              <Slider defaultValue={[0, 1000]} min={0} max={2000} step={10} />
               <div className="mt-2 flex items-center justify-between text-sm">
-                <span>KES 0</span>
-                <span>KES 100,000+</span>
+                <span>$0</span>
+                <span>$2000+</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-lg font-medium">Style</h3>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <input type="checkbox" id="modern" className="h-4 w-4 rounded border-gray-300" />
+                  <label htmlFor="modern" className="ml-2 text-sm">
+                    Modern
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input type="checkbox" id="contemporary" className="h-4 w-4 rounded border-gray-300" />
+                  <label htmlFor="contemporary" className="ml-2 text-sm">
+                    Contemporary
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input type="checkbox" id="traditional" className="h-4 w-4 rounded border-gray-300" />
+                  <label htmlFor="traditional" className="ml-2 text-sm">
+                    Traditional
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input type="checkbox" id="scandinavian" className="h-4 w-4 rounded border-gray-300" />
+                  <label htmlFor="scandinavian" className="ml-2 text-sm">
+                    Scandinavian
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input type="checkbox" id="industrial" className="h-4 w-4 rounded border-gray-300" />
+                  <label htmlFor="industrial" className="ml-2 text-sm">
+                    Industrial
+                  </label>
+                </div>
               </div>
             </div>
 
@@ -83,12 +113,12 @@ export default function ShopPage() {
               <div className="flex flex-wrap gap-2">
                 <div className="h-8 w-8 cursor-pointer rounded-full bg-black" title="Black"></div>
                 <div className="h-8 w-8 cursor-pointer rounded-full bg-white border" title="White"></div>
+                <div className="h-8 w-8 cursor-pointer rounded-full bg-gray-500" title="Gray"></div>
                 <div className="h-8 w-8 cursor-pointer rounded-full bg-blue-500" title="Blue"></div>
                 <div className="h-8 w-8 cursor-pointer rounded-full bg-green-500" title="Green"></div>
-                <div className="h-8 w-8 cursor-pointer rounded-full bg-yellow-500" title="Gold"></div>
+                <div className="h-8 w-8 cursor-pointer rounded-full bg-yellow-500" title="Yellow"></div>
                 <div className="h-8 w-8 cursor-pointer rounded-full bg-red-500" title="Red"></div>
                 <div className="h-8 w-8 cursor-pointer rounded-full bg-purple-500" title="Purple"></div>
-                <div className="h-8 w-8 cursor-pointer rounded-full bg-orange-500" title="Orange"></div>
               </div>
             </div>
 
@@ -99,8 +129,8 @@ export default function ShopPage() {
           <div className="lg:col-span-3">
             <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
               <div>
-                <h2 className="text-2xl font-bold">Epoxy Products</h2>
-                <p className="text-muted-foreground">Showing 12 of 45 products</p>
+                <h2 className="text-2xl font-bold">Products</h2>
+                <p className="text-muted-foreground">Showing 12 of 60 products</p>
               </div>
               <div className="flex w-full items-center gap-2 sm:w-auto">
                 <Input type="search" placeholder="Search products..." className="sm:w-[200px]" />
@@ -122,18 +152,18 @@ export default function ShopPage() {
               <Card className="overflow-hidden">
                 <div className="relative h-60 w-full">
                   <Image
-                    src="/images/epoxy-river-table.jpg"
-                    alt="Epoxy River Coffee Table"
+                    src="/placeholder.svg?height=600&width=600"
+                    alt="Modern Sofa"
                     fill
                     className="object-cover transition-transform hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>Epoxy River Coffee Table</CardTitle>
-                  <CardDescription>Live edge wood with turquoise epoxy river</CardDescription>
+                  <CardTitle>Modern Sofa</CardTitle>
+                  <CardDescription>Contemporary living room sofa</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">KES 45,000</div>
+                  <div className="text-2xl font-bold">$1,299.00</div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <Button variant="outline" size="sm">
@@ -149,18 +179,18 @@ export default function ShopPage() {
               <Card className="overflow-hidden">
                 <div className="relative h-60 w-full">
                   <Image
-                    src="/images/epoxy-serving-tray.jpg"
-                    alt="Epoxy Serving Tray Set"
+                    src="/placeholder.svg?height=600&width=600"
+                    alt="Pendant Light"
                     fill
                     className="object-cover transition-transform hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>Luxury Epoxy Serving Tray</CardTitle>
-                  <CardDescription>Black & white marble effect with gold handles</CardDescription>
+                  <CardTitle>Pendant Light</CardTitle>
+                  <CardDescription>Minimalist hanging light fixture</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">KES 8,500</div>
+                  <div className="text-2xl font-bold">$249.00</div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <Button variant="outline" size="sm">
@@ -176,18 +206,18 @@ export default function ShopPage() {
               <Card className="overflow-hidden">
                 <div className="relative h-60 w-full">
                   <Image
-                    src="/images/epoxy-clock-green.jpg"
-                    alt="Epoxy Resin Clock"
+                    src="/placeholder.svg?height=600&width=600"
+                    alt="Accent Chair"
                     fill
                     className="object-cover transition-transform hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>Epoxy Resin Wall Clock</CardTitle>
-                  <CardDescription>Green marble effect with gold Roman numerals</CardDescription>
+                  <CardTitle>Accent Chair</CardTitle>
+                  <CardDescription>Stylish accent chair for any room</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">KES 12,000</div>
+                  <div className="text-2xl font-bold">$499.00</div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <Button variant="outline" size="sm">
@@ -203,18 +233,18 @@ export default function ShopPage() {
               <Card className="overflow-hidden">
                 <div className="relative h-60 w-full">
                   <Image
-                    src="/images/epoxy-rose-art.jpg"
-                    alt="Epoxy Rose Art"
+                    src="/placeholder.svg?height=600&width=600"
+                    alt="Coffee Table"
                     fill
                     className="object-cover transition-transform hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>Preserved Rose Epoxy Art</CardTitle>
-                  <CardDescription>LED-lit epoxy art with real preserved roses</CardDescription>
+                  <CardTitle>Coffee Table</CardTitle>
+                  <CardDescription>Modern glass and wood coffee table</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">KES 18,000</div>
+                  <div className="text-2xl font-bold">$349.00</div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <Button variant="outline" size="sm">
@@ -230,18 +260,18 @@ export default function ShopPage() {
               <Card className="overflow-hidden">
                 <div className="relative h-60 w-full">
                   <Image
-                    src="/images/epoxy-outdoor-tables.jpg"
-                    alt="Outdoor Epoxy Tables"
+                    src="/placeholder.svg?height=600&width=600"
+                    alt="Area Rug"
                     fill
                     className="object-cover transition-transform hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>Ocean Theme Side Tables</CardTitle>
-                  <CardDescription>Set of 3 outdoor epoxy tables with sea elements</CardDescription>
+                  <CardTitle>Area Rug</CardTitle>
+                  <CardDescription>Patterned area rug for living spaces</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">KES 35,000</div>
+                  <div className="text-2xl font-bold">$199.00</div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <Button variant="outline" size="sm">
@@ -257,18 +287,18 @@ export default function ShopPage() {
               <Card className="overflow-hidden">
                 <div className="relative h-60 w-full">
                   <Image
-                    src="/images/epoxy-clock-square.jpg"
-                    alt="Square Epoxy Clock"
+                    src="/placeholder.svg?height=600&width=600"
+                    alt="Wall Art"
                     fill
                     className="object-cover transition-transform hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>Marble Effect Epoxy Clock</CardTitle>
-                  <CardDescription>Square design with black & gold marble pattern</CardDescription>
+                  <CardTitle>Wall Art</CardTitle>
+                  <CardDescription>Abstract canvas wall art</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">KES 14,500</div>
+                  <div className="text-2xl font-bold">$129.00</div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <Button variant="outline" size="sm">
@@ -343,9 +373,9 @@ export default function ShopPage() {
       <section className="bg-muted/30 py-16">
         <div className="container">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight">Featured Epoxy Collections</h2>
+            <h2 className="mb-4 text-3xl font-bold tracking-tight">Featured Collections</h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Explore our curated epoxy collections designed for different styles and spaces.
+              Explore our curated collections designed to complement various interior styles.
             </p>
           </div>
 
@@ -353,18 +383,18 @@ export default function ShopPage() {
             <div className="group relative overflow-hidden rounded-lg">
               <div className="relative h-80 w-full">
                 <Image
-                  src="/images/epoxy-river-table.jpg"
-                  alt="River Table Collection"
+                  src="/placeholder.svg?height=800&width=600"
+                  alt="Minimalist Collection"
                   fill
                   className="object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/30 transition-opacity group-hover:bg-black/40" />
               </div>
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white">
-                <h3 className="mb-2 text-2xl font-bold">River Table Collection</h3>
-                <p className="mb-4">Stunning live-edge tables with flowing epoxy rivers.</p>
+                <h3 className="mb-2 text-2xl font-bold">Minimalist Collection</h3>
+                <p className="mb-4">Clean lines and functional design for modern spaces.</p>
                 <Button asChild variant="secondary">
-                  <Link href="/shop/collections/river-tables">Explore Collection</Link>
+                  <Link href="/shop/collections/minimalist">Explore Collection</Link>
                 </Button>
               </div>
             </div>
@@ -372,18 +402,18 @@ export default function ShopPage() {
             <div className="group relative overflow-hidden rounded-lg">
               <div className="relative h-80 w-full">
                 <Image
-                  src="/images/epoxy-serving-tray.jpg"
-                  alt="Serving Essentials Collection"
+                  src="/placeholder.svg?height=800&width=600"
+                  alt="Scandinavian Collection"
                   fill
                   className="object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/30 transition-opacity group-hover:bg-black/40" />
               </div>
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white">
-                <h3 className="mb-2 text-2xl font-bold">Serving Essentials</h3>
-                <p className="mb-4">Beautiful epoxy serving pieces for entertaining.</p>
+                <h3 className="mb-2 text-2xl font-bold">Scandinavian Collection</h3>
+                <p className="mb-4">Light, airy designs inspired by Nordic simplicity.</p>
                 <Button asChild variant="secondary">
-                  <Link href="/shop/collections/serving">Explore Collection</Link>
+                  <Link href="/shop/collections/scandinavian">Explore Collection</Link>
                 </Button>
               </div>
             </div>
@@ -391,18 +421,18 @@ export default function ShopPage() {
             <div className="group relative overflow-hidden rounded-lg">
               <div className="relative h-80 w-full">
                 <Image
-                  src="/images/epoxy-rose-art.jpg"
-                  alt="Art Collection"
+                  src="/placeholder.svg?height=800&width=600"
+                  alt="Luxury Collection"
                   fill
                   className="object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/30 transition-opacity group-hover:bg-black/40" />
               </div>
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white">
-                <h3 className="mb-2 text-2xl font-bold">Art Collection</h3>
-                <p className="mb-4">Unique epoxy art pieces for modern interiors.</p>
+                <h3 className="mb-2 text-2xl font-bold">Luxury Collection</h3>
+                <p className="mb-4">Elegant and sophisticated pieces for upscale interiors.</p>
                 <Button asChild variant="secondary">
-                  <Link href="/shop/collections/art">Explore Collection</Link>
+                  <Link href="/shop/collections/luxury">Explore Collection</Link>
                 </Button>
               </div>
             </div>
@@ -416,7 +446,7 @@ export default function ShopPage() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight">Stay Updated</h2>
             <p className="mb-6">
-              Subscribe to our newsletter to receive updates on new epoxy products, special offers, and design tips.
+              Subscribe to our newsletter to receive updates on new products, special offers, and design tips.
             </p>
             <div className="flex flex-col gap-2 sm:flex-row">
               <Input type="email" placeholder="Enter your email" className="bg-primary-foreground text-primary" />

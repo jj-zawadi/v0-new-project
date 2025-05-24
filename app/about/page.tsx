@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -9,8 +10,8 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[40vh] w-full overflow-hidden">
         <Image
-          src="/images/marble-epoxy-kitchen.jpg"
-          alt="About Epoxy & Aesthetic Works Kenya"
+          src="/placeholder.svg?height=800&width=1920"
+          alt="About Elegance Interiors"
           fill
           className="object-cover"
           priority
@@ -19,7 +20,7 @@ export default function AboutPage() {
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">About Us</h1>
           <p className="max-w-2xl text-lg text-white/90">
-            Discover the story, expertise, and values behind Epoxy & Aesthetic Works Kenya.
+            Discover the story, values, and people behind Elegance Interiors.
           </p>
         </div>
       </section>
@@ -30,32 +31,25 @@ export default function AboutPage() {
           <div className="flex flex-col justify-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight">Our Story</h2>
             <p className="mb-4 text-muted-foreground">
-              In the heart of Kenya, where creativity meets craftsmanship, a spark of inspiration gave birth to Epoxy &
-              Aesthetic Works Kenya. What started as a fascination with shiny, seamless finishes soon transformed into a
-              passion for turning ordinary spaces into stunning works of art.
+              Founded in 2010, Elegance Interiors began as a small design studio with a big vision: to transform spaces
+              into beautiful, functional environments that enhance people's lives.
             </p>
             <p className="mb-4 text-muted-foreground">
-              Founded by a team of dreamers, makers, and doers, we took on a mission: to bring beauty, durability, and a
-              touch of luxury into Kenyan homes, offices, and commercial spaces — one project at a time.
+              Our founder, Jane Smith, started the company after spending a decade working with leading design firms
+              across the country. She noticed a gap in the market for personalized, client-focused interior design
+              services that prioritized both aesthetics and functionality.
             </p>
             <p className="mb-4 text-muted-foreground">
-              From our very first custom resin table to bold epoxy floors and textured 3D wall panels, every piece we
-              create tells a story. A story of detail. A story of pride. A story of Kenya's vibrant, growing love for
-              modern interior finishes.
+              What began as a one-woman operation has grown into a team of passionate designers, project managers, and
+              craftspeople who share a commitment to excellence and innovation in interior design.
             </p>
             <p className="text-muted-foreground">
-              Today, we are more than just a brand — we are a movement. We believe that good design should be both
-              functional and unforgettable. And we are here to help our clients express their personality through art
-              that lasts. Welcome to the world of Epoxy & Aesthetic Works Kenya — where your space becomes your canvas.
+              Today, Elegance Interiors is proud to have transformed hundreds of spaces, from cozy homes to expansive
+              commercial properties, always maintaining our core values of quality, creativity, and client satisfaction.
             </p>
           </div>
           <div className="relative h-[400px] overflow-hidden rounded-lg lg:h-auto">
-            <Image
-              src="/images/epoxy-rose-art.jpg"
-              alt="Our epoxy artistry and craftsmanship"
-              fill
-              className="object-cover"
-            />
+            <Image src="/placeholder.svg?height=800&width=600" alt="Our design studio" fill className="object-cover" />
           </div>
         </div>
       </section>
@@ -66,7 +60,7 @@ export default function AboutPage() {
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight">Our Values</h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              These core principles guide everything we do at Epoxy & Aesthetic Works Kenya.
+              These core principles guide everything we do at Elegance Interiors.
             </p>
           </div>
 
@@ -169,7 +163,7 @@ export default function AboutPage() {
                     strokeLinejoin="round"
                     className="h-6 w-6"
                   >
-                    <path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9 3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+                    <path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
                   </svg>
                 </div>
                 <h3 className="mb-2 text-xl font-medium">Sustainability</h3>
@@ -182,124 +176,198 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Process */}
+      {/* Meet the Team */}
       <section className="container py-16">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight">Our Epoxy Design Process</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight">Meet Our Team</h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            We follow a structured approach to ensure your epoxy project runs smoothly from start to finish.
+            Our talented team of designers and professionals brings expertise, creativity, and passion to every project.
           </p>
         </div>
 
-        <div className="relative">
-          <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 bg-border md:block hidden"></div>
-          <div className="space-y-12">
-            <div className="relative grid gap-6 md:grid-cols-2">
-              <div className="md:text-right flex flex-col justify-center order-2 md:order-1">
-                <h3 className="text-xl font-medium">Consultation & Site Visit</h3>
-                <p className="text-muted-foreground">
-                  We start with a one-on-one discussion to understand your vision. A site visit follows to assess the
-                  space, take measurements, and evaluate surface conditions.
-                </p>
-              </div>
-              <div className="relative order-1 md:order-2">
-                <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
-                <div className="relative h-[240px] overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/team-consultation.jpg"
-                    alt="Team consultation and planning"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="text-center">
+            <div className="mb-4 overflow-hidden rounded-full">
+              <Image
+                src="/placeholder.svg?height=300&width=300"
+                alt="Jane Smith"
+                width={200}
+                height={200}
+                className="mx-auto h-48 w-48 object-cover"
+              />
+            </div>
+            <h3 className="mb-1 text-xl font-medium">Jane Smith</h3>
+            <p className="text-muted-foreground">Founder & Principal Designer</p>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-4 overflow-hidden rounded-full">
+              <Image
+                src="/placeholder.svg?height=300&width=300"
+                alt="Michael Johnson"
+                width={200}
+                height={200}
+                className="mx-auto h-48 w-48 object-cover"
+              />
+            </div>
+            <h3 className="mb-1 text-xl font-medium">Michael Johnson</h3>
+            <p className="text-muted-foreground">Senior Interior Designer</p>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-4 overflow-hidden rounded-full">
+              <Image
+                src="/placeholder.svg?height=300&width=300"
+                alt="Sarah Williams"
+                width={200}
+                height={200}
+                className="mx-auto h-48 w-48 object-cover"
+              />
+            </div>
+            <h3 className="mb-1 text-xl font-medium">Sarah Williams</h3>
+            <p className="text-muted-foreground">Project Manager</p>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-4 overflow-hidden rounded-full">
+              <Image
+                src="/placeholder.svg?height=300&width=300"
+                alt="David Chen"
+                width={200}
+                height={200}
+                className="mx-auto h-48 w-48 object-cover"
+              />
+            </div>
+            <h3 className="mb-1 text-xl font-medium">David Chen</h3>
+            <p className="text-muted-foreground">Commercial Design Specialist</p>
+          </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button asChild variant="outline">
+            <Link href="/about/team" className="group">
+              View Full Team
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="bg-muted/30 py-16">
+        <div className="container">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight">Our Design Process</h2>
+            <p className="mx-auto max-w-2xl text-muted-foreground">
+              We follow a structured approach to ensure your project runs smoothly from start to finish.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 bg-border md:block hidden"></div>
+            <div className="space-y-12">
+              <div className="relative grid gap-6 md:grid-cols-2">
+                <div className="md:text-right flex flex-col justify-center order-2 md:order-1">
+                  <h3 className="text-xl font-medium">Initial Consultation</h3>
+                  <p className="text-muted-foreground">
+                    We meet to discuss your vision, needs, and budget for the project. This helps us understand your
+                    goals and expectations.
+                  </p>
+                </div>
+                <div className="relative order-1 md:order-2">
+                  <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
+                  <div className="relative h-[200px] overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=400&width=600"
+                      alt="Initial Consultation"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="relative grid gap-6 md:grid-cols-2">
-              <div className="relative">
-                <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
-                <div className="relative h-[240px] overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/epoxy-wall-installation.jpg"
-                    alt="Custom design development"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+              <div className="relative grid gap-6 md:grid-cols-2">
+                <div className="relative">
+                  <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
+                  <div className="relative h-[200px] overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=400&width=600"
+                      alt="Concept Development"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <h3 className="text-xl font-medium">Concept Development</h3>
+                  <p className="text-muted-foreground">
+                    We create design concepts based on your requirements and preferences, including mood boards, color
+                    schemes, and space planning.
+                  </p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center">
-                <h3 className="text-xl font-medium">Custom Design & Quotation</h3>
-                <p className="text-muted-foreground">
-                  We create a tailored design proposal based on your needs and send a clear, detailed quotation. Once
-                  approved, we lock in project timelines.
-                </p>
-              </div>
-            </div>
 
-            <div className="relative grid gap-6 md:grid-cols-2">
-              <div className="md:text-right flex flex-col justify-center order-2 md:order-1">
-                <h3 className="text-xl font-medium">Surface Preparation</h3>
-                <p className="text-muted-foreground">
-                  We meticulously prepare concrete floors through diamond grinding, crack repair, and thorough cleaning.
-                  This critical step ensures optimal epoxy adhesion and a flawless, long-lasting finish.
-                </p>
-              </div>
-              <div className="relative order-1 md:order-2">
-                <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
-                <div className="relative h-[240px] overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/hands-on-surface-prep.jpg"
-                    alt="Hands-on concrete surface preparation with professional grinding tools"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+              <div className="relative grid gap-6 md:grid-cols-2">
+                <div className="md:text-right flex flex-col justify-center order-2 md:order-1">
+                  <h3 className="text-xl font-medium">Design Presentation</h3>
+                  <p className="text-muted-foreground">
+                    We present our design concepts, including 3D visualizations, material samples, and detailed plans
+                    for your feedback and approval.
+                  </p>
+                </div>
+                <div className="relative order-1 md:order-2">
+                  <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
+                  <div className="relative h-[200px] overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=400&width=600"
+                      alt="Design Presentation"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="relative grid gap-6 md:grid-cols-2">
-              <div className="relative">
-                <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
-                <div className="relative h-[240px] overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/marble-epoxy-kitchen.jpg"
-                    alt="Expert epoxy application and finishing"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+              <div className="relative grid gap-6 md:grid-cols-2">
+                <div className="relative">
+                  <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
+                  <div className="relative h-[200px] overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=400&width=600"
+                      alt="Implementation"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <h3 className="text-xl font-medium">Implementation</h3>
+                  <p className="text-muted-foreground">
+                    We execute the approved design plan, coordinating with contractors, vendors, and craftspeople to
+                    bring your vision to life.
+                  </p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center">
-                <h3 className="text-xl font-medium">Application & Finishing</h3>
-                <p className="text-muted-foreground">
-                  Using premium materials, we apply your epoxy flooring, 3D wall finish, or resin décor with precision.
-                  We finish with polishing or sealing for long-lasting beauty.
-                </p>
-              </div>
-            </div>
 
-            <div className="relative grid gap-6 md:grid-cols-2">
-              <div className="md:text-right flex flex-col justify-center order-2 md:order-1">
-                <h3 className="text-xl font-medium">Handover & Aftercare</h3>
-                <p className="text-muted-foreground">
-                  We complete your project with a thorough walkthrough, provide maintenance guidelines, and ensure your
-                  complete satisfaction. Our team remains available for ongoing support and future projects.
-                </p>
-              </div>
-              <div className="relative order-1 md:order-2">
-                <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
-                <div className="relative h-[240px] overflow-hidden rounded-lg">
-                  <Image
-                    src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
-                    alt="Professional handshake - project completion and client satisfaction"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+              <div className="relative grid gap-6 md:grid-cols-2">
+                <div className="md:text-right flex flex-col justify-center order-2 md:order-1">
+                  <h3 className="text-xl font-medium">Final Reveal</h3>
+                  <p className="text-muted-foreground">
+                    We present your completed space, ensuring every detail meets your expectations and providing
+                    guidance on maintenance and care.
+                  </p>
+                </div>
+                <div className="relative order-1 md:order-2">
+                  <div className="absolute left-0 top-3 h-6 w-6 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-1/2 hidden md:block"></div>
+                  <div className="relative h-[200px] overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=400&width=600"
+                      alt="Final Reveal"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -310,7 +378,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Ready to Transform Your Space?</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight">Ready to Transform Your Space?</h2>
           <p className="mx-auto mb-8 max-w-2xl">
             Contact us today to schedule a consultation and take the first step toward your dream interior.
           </p>
